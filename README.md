@@ -73,6 +73,29 @@ The following code demonstrates how I created a SQL query to filter for employee
 FROM employees
 WHERE department = ‘Marketing’ AND office LIKE ‘EAST%’;</b>
 
+![image](https://github.com/YoriTano/SQL-Queries/assets/106491544/dd287292-e627-4dcf-89e4-10e01d045641)
+
+<b>This query returns all employees in the Finance and Sales departments. First, I started by selecting all data from the employees table. Then, I used a WHERE clause with OR to filter for employees who are in the Finance and Sales departments. I used the OR operator instead of AND because I want all employees who are in either department. The first condition is department = 'Finance', which filters for employees from the Finance department. The second condition is department = 'Sales', which filters for employees from the Sales department.</b>
+
+
+<b>Retrieve all employees not in IT
+My team needs to make one more security update on employees who are not in the Information Technology department. To make the update, I first have to get information on these employees.
+
+The following demonstrates how I created a SQL query to filter for employee machines from employees not in the  Information Technology department.
+FROM employees
+WHERE NOT department = ‘Information Technology’;</b>
+
+![image](https://github.com/YoriTano/SQL-Queries/assets/106491544/34a2f02a-ef4b-4e16-8597-8277f9e87e07)
+
+<b>The query returns all employees not in the Information Technology department. First, I started by selecting all data from the employees table. Then, I used a WHERE clause with NOT to filter for employees not in this department.</b>
+
+<h2>Summary</h2>
+<b>I applied filters to SQL queries to get specific information on login attempts and employee machines. I used two different tables, log_in_attempts and employees. I used the AND, OR, and NOT operators to filter for the specific information needed for each task. I also used LIKE and the percentage sign (%) wildcard to filter for patterns.</b>
+
+
+
+
+
 
 
 
