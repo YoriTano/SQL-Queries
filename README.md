@@ -47,5 +47,36 @@ SELECT *
 FROM log_in_attempts
 WHERE DATE(login_time) IN ('2022-05-08', '2022-05-09');</b>
 
+![image](https://github.com/YoriTano/SQL-Queries/assets/106491544/f746097b-e98b-4f0d-9de8-f7ca77a86159)
+
+
+<b>This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with an OR operator to filter my results to output only login attempts that occurred on either 2022-05-09 or 2022-05-08. The first condition is login_date = '2022-05-09', which filters for logins on 2022-05-09. The second condition is login_date = '2022-05-08', which filters for logins on 2022-05-08.</b>
+
+<b>Retrieve login attempts outside of Mexico
+After investigating the organization’s data on login attempts, I believe there is an issue with the login attempts that occurred outside of Mexico. These login attempts should be investigated.
+
+The following code demonstrates how I created a SQL query to filter for login attempts that occurred outside of Mexico. 
+SELECT *
+FROM log_in_attempts
+WHERE NOT country LIKE ‘MEX%’;</b>
+
+
+
+![image](https://github.com/YoriTano/SQL-Queries/assets/106491544/7bfb2802-3598-425f-9a8d-98157495b5b8)
+
+<b>This query returns all login attempts that occurred in countries other than Mexico. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with NOT to filter for countries other than Mexico. I used LIKE with MEX% as the pattern to match because the dataset represents Mexico as MEX and MEXICO. The percentage sign (%) represents any number of unspecified characters when used with LIKE.</b>
+
+<b>Retrieve employees in Marketing
+My team wants to update the computers for certain employees in the Marketing department. To do this, I have to get information on which employee machines to update.
+
+The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Marketing department in the East building.
+FROM employees
+WHERE department = ‘Marketing’ AND office LIKE ‘EAST%’;</b>
+
+
+
+
+
+
 
 
